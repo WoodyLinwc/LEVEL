@@ -1,125 +1,111 @@
-.nav{
+.nav {
     position: relative;
     list-style-type: none;
     margin: -100;
     padding: 10;
     overflow: hidden;
-    background-color:white;
-
-
-}
-.header {
+    background-color: white;
+  }
+  
+  .header {
     padding: 10px 16px;
     background: none;
     color: none;
-}
-
-.tab {
+  }
+  
+  .tab {
     float: right;
-
-    font-family:'Barlow Condensed';
-
-}
-
-.tab a {
+    font-family: 'Barlow Condensed';
+  }
+  
+  .tab a {
     display: block;
     color: black;
     padding: 50px;
     text-decoration: none;
     font-size: 40px;
-}
-.tab a:hover{
-    color:rgb(79, 134, 244);
-    }
-
-
-.info{
-    font-family:"Barlow Condensed";
-    margin-top:100px;
-    /* padding-top: 200px; */
-    /* padding-left: 200px;  */
-    /* padding-right: 200px;    */
-}
-
-
-.tab1 {
+  }
+  
+  .tab a:hover {
+    color: rgb(79, 134, 244);
+  }
+  
+  .info {
+    font-family: "Barlow Condensed";
+    margin-top: 1px;
+    margin-left: 50px;
+  }
+  
+  .tab1 {
     float: left;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    border: none;
+    background-color: white;
     width: 30%;
     height: 300px;
-
-}
-
-
-.tab1 button {
+  }
+  
+  .tab1 button {
+    font-family: 'Barlow Condensed';
+    font-weight: 550;
     display: block;
     background-color: inherit;
     color: black;
-    padding: 22px 16px;
+    padding: 10px 16px;
     width: 100%;
     border: none;
     outline: none;
     text-align: left;
     cursor: pointer;
-    font-size: 17px;
-}
-
-.info1{
+    font-size: 25px;
+  }
+  
+  .info1 {
+    font-size: 30px;
+    font-family: "Barlow Condensed";
+  }
+  
+  .info2 {
     font-size: 20px;
-}
-
-.info2{
-    font-size: 10px;
-}
-
-.info3{
-    font-family:"Barlow Condensed";
-    padding-top: 200px;
-    padding-left: 200px;
-    padding-right: 200px;
-}
-.info4{
-   font-size: 40px;
-}
-
-
-
-.tabcontent {
+    font-family: "Barlow Condensed";
+  }
+  
+  .info3 {
+    margin-left: 50px;
+    font-size: 40px;
+    font-family: "Barlow Condensed";
+  }
+  
+  .info4 {
+    font-size: 30px;
+    margin-left: 100px;
+    font-family: "Barlow Condensed";
+  }
+  
+  .tabcontent {
     float: left;
     padding: 0px 12px;
-    border: 1px solid #ccc;
+    border: none;
     width: 70%;
     border-left: none;
     height: 300px;
     display: none;
-}
-
-
-.tab1 button:hover {
-background-color: #ddd;
-}
-
-
-* {box-sizing: border-box;}
-    body {font-family: "Lato", sans-serif;}
-
-
-.tab1 button.active {
-    background-color: #ccc;
-}
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-body {
-    font-family: Arial, sans-serif;
+  }
+  
+  .tab1 button:hover {
+    background-color: #ddd;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
-}
-
-header {
+  }
+  
+  header {
     width: 50%;
     display: flex;
     justify-content: space-between;
@@ -129,24 +115,24 @@ header {
     padding: 20px;
     background-color: white;
     border-bottom: 1px solid #ddd;
-}
-
-h1 {
+  }
+  
+  h1 {
     margin: 0;
     text-align: left;
-}
-
-.selection {
+  }
+  
+  .selection {
     display: flex;
     align-items: center;
-}
-
-p {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-table {
+  }
+  
+  p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  table {
     width: 50%;
     font-size: 15px;
     border-collapse: collapse;
@@ -155,29 +141,30 @@ table {
     margin-left: auto;
     margin-right: auto;
     border: 1px solid #ccc;
-}
-
-
-th, td {
+  }
+  
+  td {
     padding: 10px;
     text-align: left;
-}
-select {
-  font-size: 30px;
-   /* Border width, style, and color */
-  border: 4px solid black;
-
-}
-
-thead {
+  }
+  
+  th {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  select {
+    font-size: 30px;
+    /* Border width, style, and color */
+    border: 4px solid black;
+  }
+  
+  thead {
     background-color: #eee;
-
-}
-
-/* style of table
- */
-tbody tr:nth-child(even) {
+  }
+  
+  /* Style of table */
+  tbody tr:nth-child(even) {
     background-color: #f8f8f8;
-}
-
-/* leaderboard section */
+  }
+  
