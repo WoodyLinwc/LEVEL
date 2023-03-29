@@ -1,1 +1,7 @@
 name: LE-V-EL
+
+description:
+  Provide standardized visualization benchmark datasets
+  Rankings of computational methods for visualization understanding.
+
+lang: en-US
