@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
+        <style>
+              .nav {
+                position: relative;
+                list-style-type: none;
+                margin: -100;
+                padding: 10;
+                overflow: hidden;
+                background-color:white;
+            }
+
+
+            .header {
+                padding: 10px 16px;
+                background: none;
+                color: none;
+            }
+
+            .tab{
+                float: right;
+
+                font-family:"Barlow Condensed";
+ 
+            }
+
+            .tab a {
+                display: block; 
+                color: black;
+                padding: 50px;
+                text-decoration: none;
+                font-size: 40px;
+            }
+            .tab a:hover{
+                color:rgb(79, 134, 244);
+            }
+            .info{
+                font-family:"Barlow Condensed";  
+                margin-top:100px;
+                /* padding-top: 200px; */
+                /* padding-left: 200px;  */
+                /* padding-right: 200px;    */
+            }
+          
+           
+            .tab1 {
+            float: left;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+            width: 30%;
+            height: 300px;
+            
+            }
+
+
+                .tab1 button {
+                    display: block;
+                    background-color: inherit;
+                    color: black;
+                    padding: 22px 16px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    text-align: left;
+                    cursor: pointer;
+                    font-size: 17px;
+                }
+                .info1{
+               font-size: 20px;
+            }
+
+            .info2{
+                font-size: 10px;
+            }
+            .tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  display: none;
+}
+
+
+.tab1 button:hover {
+  background-color: #ddd;
+}
+
+
+* {box-sizing: border-box;}
+            body {font-family: "Lato", sans-serif;}
+
+
+.tab1 button.active {
+  background-color: #ccc;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+        </style>
+    </head>
+    <body>
+        <div class="header" id="myHeader">
+
+            <ul class="nav">
+                <a href="index.html"><img style=" width: 330px; height:150px; padding-left: -1000;" src="logo1.png" alt="Italian Trulli"></a>
+                <li class="tab"><b><a href="link.html">LINKS</a></b></li>
+                <li class="tab"><b><a href="submit.html">SUBMIT</a></b></li>
+                <li class="tab" ><b><a href="dataset1.html"style="color: rgb(79, 134, 244);">DATASETS</a></b></li>
+            
+            </ul>
+            
+            </div>
+            <div class="info">
+                
+                <div class="tab1">
+                    <button class="tablinks" onmouseover="openCity(event, 'Dataset1')">Dataset1</button>
+                    <button class="tablinks" onmouseover="openCity(event, 'Dataset2')">Dataset2</button>
+                    <button class="tablinks" onmouseover="openCity(event, 'Dataset3')">Dataset3</button>
+            
+            </div> 
+            <div id="Dataset1" class="tabcontent">
+                <p class="info1"> Dataset1: CQAW Challenge</p>
+                <p class="info2"> Lorem ipsomsit amet, consectetor adipiscing elit</p>
+                <p class="info1"> Dataset2: CQAW Challenge</p>
+                <p class="info2">Sed do eismod tempor incudidunt ut labore et dolore magne alique  </p>
+                <p class="info1"> Dataset3: CQAW Challenge</p>
+                <p class="info2"> um enim ad minim venium, ques nostrud exercitation ullamco laboris nisi ut aliquip ex ea commondo consequet </p>
+              </div>
+              <div id="Dataset2" class="tabcontent">
+                <p class="info1"> Dataset1: CQAW Challenge</p>
+              
+                <p class="info1"> Dataset2: CQAW Challenge</p>
+                <p class="info2">Sed do eismod tempor incudidunt ut labore et dolore magne alique  </p>
+                <p class="info1"> Dataset3: CQAW Challenge</p>
+                <p class="info2"> um enim ad minim venium, ques nostrud exercitation ullamco laboris nisi ut aliquip ex ea commondo consequet </p>
+              </div>
+              <div id="Dataset3" class="tabcontent">
+                <p class="info1"> Dataset1: CQAW Challenge</p>
+                <p class="info2"> Lorem ipsomsit amet, consectetor adipiscing elit</p>
+                <p class="info1"> Dataset2: CQAW Challenge</p>
+                <p class="info2">Sed do eismod tempor incudidunt ut labore et dolore magne alique  </p>
+                <p class="info1"> Dataset3: CQAW Challenge</p>
+                <p class="info2"> um enim ad minim venium, ques nostrud exercitation ullamco laboris nisi ut aliquip ex ea commondo consequet </p>
+              </div>
+              <div class="clearfix"></div>
+                
+
+            </div>
+
+
+
+            <script>
+                function openCity(evt, cityName) {
+                  var i, tabcontent, tablinks;
+                  tabcontent = document.getElementsByClassName("tabcontent");
+                  for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                  }
+                  tablinks = document.getElementsByClassName("tablinks");
+                  for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                  document.getElementById(cityName).style.display = "block";
+                  evt.currentTarget.className += " active";
+                }
+                </script>
+    </body>
+</html>
