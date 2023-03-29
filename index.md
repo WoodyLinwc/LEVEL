@@ -8,3 +8,48 @@ layout: default
       or Chart Question Answering. You can participate by submitting the results of your algorithm.</b>
   </p>
 
+  <header>
+    <img src="img/leaderboard_logo.png" alt="pic_of_leaderboard" width="100" height="100">
+    <h1>Current Leaderboard</h1>
+    <div class="selection">
+      <select name="dataset" id="dataset" style="font-size: 30px; border: 4px solid black;">
+        <option value="All_Datasets">All Datasets</option>
+        <option value="dataset1">Dataset 1</option>
+        <option value="dataset2">Dataset 2</option>
+        <option value="dataset3">Dataset 3</option>
+      </select>
+    </div>
+  </header>
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Dataset 1</th>
+          <th>Dataset 2</th>
+          <th>Dataset 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Team A</td>
+          <td>0.98</td>
+          <td>0.77</td>
+          <td>0.66</td>
+        </tr>
+        <tr>
+          <td>Team B</td>
+          <td>0.98</td>
+          <td>0.77</td>
+          <td>0.66</td>
+        </tr>
+        <tr>
+          <td>Team C</td>
+          <td>0.98</td>
+          <td>0.77</td>
+          <td>0.66</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
