@@ -8,3 +8,4 @@ layout: default
         or Chart Question Answering. You can participate by submitting the results of your algorithm.
     </b>
 </p>
+
