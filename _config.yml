@@ -5,3 +5,8 @@ description:
   Rankings of computational methods for visualization understanding.
 
 lang: en-US
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
