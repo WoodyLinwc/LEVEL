@@ -19,9 +19,9 @@
             <div class="info">
                 
                 <div class="tab1">
-                    <button class="tablinks" onmouseover="openCity(event, 'Dataset1')">Dataset1</button>
-                    <button class="tablinks" onmouseover="openCity(event, 'Dataset2')">Dataset2</button>
-                    <button class="tablinks" onmouseover="openCity(event, 'Dataset3')">Dataset3</button>
+                    <button class="tablinks" onmouseover="showDataset(event, 'Dataset1')">Dataset1</button>
+                    <button class="tablinks" onmouseover="showDataset(event, 'Dataset2')">Dataset2</button>
+                    <button class="tablinks" onmouseover="showDataset(event, 'Dataset3')">Dataset3</button>
             
             </div> 
             <div id="Dataset1" class="tabcontent">
@@ -52,23 +52,6 @@
                 
 
             </div>
-
-
-
-            <script>
-                function openCity(evt, cityName) {
-                  var i, tabcontent, tablinks;
-                  tabcontent = document.getElementsByClassName("tabcontent");
-                  for (i = 0; i < tabcontent.length; i++) {
-                    tabcontent[i].style.display = "none";
-                  }
-                  tablinks = document.getElementsByClassName("tablinks");
-                  for (i = 0; i < tablinks.length; i++) {
-                    tablinks[i].className = tablinks[i].className.replace(" active", "");
-                  }
-                  document.getElementById(cityName).style.display = "block";
-                  evt.currentTarget.className += " active";
-                }
-                </script>
+            <script src="js/scripts.js"></script>
     </body>
 </html>
