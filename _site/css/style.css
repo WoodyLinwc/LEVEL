@@ -16,6 +16,7 @@
   .tab {
     float: right;
     font-family: 'Barlow Condensed';
+    color: rgb(79, 134, 244);
   }
   
   .tab a {
