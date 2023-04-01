@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Level Platform</title>
-    <link href='https://fonts.googleapis.com/css?family=Barlow Condensed' rel='stylesheet'>
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <div class="header">
-      <ul class="nav">
-        <a href="index.html"><img src="img/logo.png" alt="Italian Trulli" style="width: 330px; height: 150px;"></a>
-        <li class="tab"><a href="link.html">LINKS</a></li>
-        <li class="tab"><a href="submit.html">SUBMIT</a></li>
-        <li class="tab"><a href="dataset.html"style="color: rgb(79, 134, 244);">DATASETS</a></li>
-      </ul>
-    </div>
-
-    <div class="info">
+---
+title: dataset
+layout: dataset
+---
+  <div class="info">
       <div class="tab1">
           <button class="tablinks" onmouseover="showDataset(event, 'Dataset1')">Dataset 1: CQAW Challenge</button>
           <button class="tablinks" onmouseover="showDataset(event, 'Dataset2')">Dataset 2: Something</button>
@@ -36,9 +22,4 @@
     </div>
     <div class="clearfix"></div>
   </div>
-<script src="js/scripts.js"></script>
-
-
-
-  </body>
-</html>
+  <script src="js/scripts.js"></script>
