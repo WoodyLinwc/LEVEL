@@ -168,4 +168,8 @@
   tbody tr:nth-child(even) {
     background-color: #f8f8f8;
   }
+
+  .highlighted {
+    background-color: #a9a9a9;
+  }
   
