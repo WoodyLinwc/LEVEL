@@ -12,21 +12,38 @@ function showDataset(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 
-// Sample data for demonstration
-// it is hashMap not json file
-const leaderboardData = [
-  { team: "Team A", dataset1: Math.random(), dataset2: Math.random(), dataset3: Math.random() },
-  { team: "Team B", dataset1: Math.random(), dataset2: Math.random(), dataset3: Math.random() },
-  { team: "Team C", dataset1: Math.random(), dataset2: Math.random(), dataset3: Math.random() },
-  { team: "Team D", dataset1: Math.random(), dataset2: Math.random(), dataset3: Math.random() },
-];
+function fetchJSONFile(path, callback) {
+var httpRequest = new XMLHttpRequest();
+httpRequest.onreadystatechange = function () {
+  if (httpRequest.readyState === 4) {
+    if (httpRequest.status === 200) {
+      var data = JSON.parse(httpRequest.responseText);
+      if (callback) callback(data);
+    }
+  }
+};
+httpRequest.open("GET", path);
+httpRequest.send();
+}
+
+var leaderboardData = [];
+
+fetchJSONFile("json/example-data.json", function (data) {
+leaderboardData = data;
+
+// Initialize the leaderboard with default sorting and highlighting
+updateLeaderboard("All_Datasets");
+highlightColumn("All_Datasets");
+});
 
 const datasetSelect = document.getElementById("dataset");
 const leaderboardTable = document.querySelector("tbody");
 
-datasetSelect.addEventListener("change", (event) => {
-  updateLeaderboard(event.target.value);
-});
+function createTableCell(content) {
+const cell = document.createElement("td");
+cell.textContent = content;
+return cell;
+}
 
 function updateLeaderboard(selectedDataset) {
 leaderboardTable.innerHTML = "";
@@ -45,27 +62,14 @@ if (selectedDataset === "All_Datasets") {
 sortedData.forEach((entry) => {
   const row = document.createElement("tr");
 
-  const teamCell = document.createElement("td");
-  teamCell.textContent = entry.team;
-  row.appendChild(teamCell);
-
-  const dataset1Cell = document.createElement("td");
-  dataset1Cell.textContent = entry.dataset1.toFixed(2);
-  row.appendChild(dataset1Cell);
-
-  const dataset2Cell = document.createElement("td");
-  dataset2Cell.textContent = entry.dataset2.toFixed(2);
-  row.appendChild(dataset2Cell);
-
-  const dataset3Cell = document.createElement("td");
-  dataset3Cell.textContent = entry.dataset3.toFixed(2);
-  row.appendChild(dataset3Cell);
+  row.appendChild(createTableCell(entry.team));
+  row.appendChild(createTableCell(entry.dataset1.toFixed(2)));
+  row.appendChild(createTableCell(entry.dataset2.toFixed(2)));
+  row.appendChild(createTableCell(entry.dataset3.toFixed(2)));
 
   leaderboardTable.appendChild(row);
 });
 }
-
-// Initialize the leaderboard with default sorting
 
 function highlightColumn(selectedDataset) {
 const thElements = document.querySelectorAll("th");
@@ -102,10 +106,7 @@ switch (selectedDataset) {
 }
 
 datasetSelect.addEventListener("change", (event) => {
-  updateLeaderboard(event.target.value);
-  highlightColumn(event.target.value);
+const selectedDataset = event.target.value;
+updateLeaderboard(selectedDataset);
+highlightColumn(selectedDataset);
 });
-
-// Initialize the leaderboard with default sorting and highlighting
-updateLeaderboard("All_Datasets");
-highlightColumn("All_Datasets");
