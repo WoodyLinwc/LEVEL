@@ -1,0 +1,20 @@
+[
+  {
+    "team": "Team A",
+    "dataset1": 0.41,
+    "dataset2": 0.15,
+    "dataset3": 0.95
+  },
+  {
+    "team": "Team B",
+    "dataset1": 0.76,
+    "dataset2": 0.41,
+    "dataset3": 0.88
+  },
+  {
+    "team": "Team C",
+    "dataset1": 0.21,
+    "dataset2": 0.83,
+    "dataset3": 0.66
+  }
+]
