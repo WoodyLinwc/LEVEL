@@ -1,9 +1,9 @@
 # LEVEL
 
 Hello, this is team LEVEL
-Woody Lin (team leader)
-Sammed Jain
-Jeremy Yao
+- Woody Lin (team leader)
+- Sammed Jain
+- Jeremy Yao
 
 The goal of this project is to provide standardized visualization benchmark datasets
 and rankings of computational methods for visualization understanding.
