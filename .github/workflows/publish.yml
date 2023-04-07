@@ -1,0 +1,15 @@
+name: remote ssh command
+on: [push]
+jobs:
+
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: 158.121.104.215
+        username: woodylin
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
