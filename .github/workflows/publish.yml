@@ -12,4 +12,4 @@ jobs:
         host: 158.121.104.215
         username: woodylin
         key: ${{ secrets.KEY }}
-        port: ${{ secrets.PORT }}
+        port: 22
