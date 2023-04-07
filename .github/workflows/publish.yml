@@ -6,7 +6,7 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using ssh key
+    - name: connect to remote server using ssh key
       uses: appleboy/ssh-action@master
       with:
         host: 158.121.104.215
