@@ -30,3 +30,9 @@ jobs:
           username: woodylin
           key: ${{ secrets.KEY }}
           port: 22
+          script:
+                cd LEVEL
+                git pull
+                ./eval.py 
+                ./merge.py
+                git push
