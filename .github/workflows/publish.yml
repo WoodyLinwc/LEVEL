@@ -14,4 +14,3 @@ jobs:
         username: woodylin
         key: ${{ secrets.KEY }}
         port: 22
-        script: /home/haehn/publish.sh
