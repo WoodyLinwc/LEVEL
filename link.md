@@ -1,7 +1,7 @@
 ---
 title: link
 layout: link
-permalink: /link/
+# permalink: /link/
 ---
 
 <div class="info3">
