@@ -1,6 +1,7 @@
 ---
 title: submit
 layout: submit
+# permalink: /submit/
 ---
 
 <div class="info3">

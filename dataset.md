@@ -1,6 +1,7 @@
 ---
 title: dataset
 layout: dataset
+# permalink: /dataset/
 ---
 
   <div class="info">

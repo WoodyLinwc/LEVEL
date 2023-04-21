@@ -7,8 +7,22 @@ description: >
 lang: en-US
 
 # permalink: /:title/
+# baseurl: "/LEVEL"
+# url: https://woodylinwc.github.io/LEVEL/
+# url: http://localhost
 
 # Exclude these files from your production _site
 exclude:
   - LICENSE
   - README.md
+
+# collections:
+#   dataset:
+#     permalink: /:collection/:path/
+#     output: true
+#   submit:
+#     permalink: /:collection/:path/
+#     output: true
+#   link:
+#     permalink: /:collection/:path/
+#     output: true

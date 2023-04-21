@@ -1,6 +1,7 @@
 ---
 title: home
 layout: default
+# permalink: /home/
 ---
 
   <p class="info" style="font-family: 'Barlow Condensed'; font-size: 30px; padding: 1px 300px;">
