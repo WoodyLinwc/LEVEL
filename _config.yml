@@ -6,7 +6,7 @@ description: >
 
 lang: en-US
 
-permalink: /:title/
+# permalink: /:title/
 
 # Exclude these files from your production _site
 exclude:
