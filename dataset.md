@@ -12,7 +12,8 @@ layout: dataset
   </div>
   <div id="Dataset1" class="tabcontent">
       <p class="info1"> Dataset1: CQAW Challenge</p>
-      <p class="info2"> Lorem ipsomsit amet, consectetor adipiscing elit</p>
+      <!-- <p class="info2"> Lorem ipsomsit amet, consectetor adipiscing elit</p> -->
+      <iframe src="https://cqaw.github.io/challenge" width="800" height="400"></iframe>
     </div>
     <div id="Dataset2" class="tabcontent">
       <p class="info1"> Dataset2: CQAW Challenge</p>
