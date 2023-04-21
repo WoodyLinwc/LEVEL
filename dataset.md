@@ -17,11 +17,13 @@ layout: dataset
     </div>
     <div id="Dataset2" class="tabcontent">
       <p class="info1"> Dataset2: CQAW Challenge</p>
-      <p class="info2">Sed do eismod tempor incudidunt ut labore et dolore magne alique  </p>
+      <!-- <p class="info2">Sed do eismod tempor incudidunt ut labore et dolore magne alique  </p> -->
+      <iframe src="https://cqaw.github.io/challenge" width="800" height="400"></iframe>
     </div>
     <div id="Dataset3" class="tabcontent">
       <p class="info1"> Dataset3: CQAW Challenge</p>
-      <p class="info2"> um enim ad minim venium, ques nostrud exercitation ullamco laboris nisi ut aliquip ex ea commondo consequet </p>
+      <!-- <p class="info2"> um enim ad minim venium, ques nostrud exercitation ullamco laboris nisi ut aliquip ex ea commondo consequet </p> -->
+      <iframe src="https://cqaw.github.io/challenge" width="800" height="400"></iframe>
     </div>
     <div class="clearfix"></div>
   </div>
