@@ -172,4 +172,10 @@
   .highlighted {
     background-color: #a9a9a9;
   }
+
+  /* Style of the word */
+  .hyperlink {
+    color: rgb(79, 134, 244);
+    text-decoration: none; /* remove underline */
+  }
   
