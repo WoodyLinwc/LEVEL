@@ -1,38 +1,16 @@
 name: remote ssh command
-on:
-  pull_request:
-    types: [closed]
-
+on: pull_request
 jobs:
+
   build:
     name: Build
     runs-on: ubuntu-latest
-
     steps:
-      - name: Check if pull request was merged
-        if: github.event.pull_request.merged == true
-        run: echo "Pull request merged"
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Merge pull request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.LEVEL_TOKEN }}
-          commit-message: "Merge pull request #${{ github.event.pull_request.number }}"
-          branch: "main"
-
-      - name: Execute remote SSH commands
-        uses: appleboy/ssh-action@master
-        with:
-          host: 158.121.104.215
-          username: woodylin
-          key: ${{ secrets.KEY }}
-          port: 22
-          script:
-                cd LEVEL
-                git pull
-                ./eval.py 
-                ./merge.py
-                git push
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: 158.121.104.215
+        username: woodylin
+        key: ${{ secrets.KEY }}
+        port: 22
+        script: /home/woodylin/publish.sh
