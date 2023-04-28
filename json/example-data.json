@@ -13,8 +13,8 @@
   },
   {
     "team": "Team C",
-    "dataset1": 1,
-    "dataset2": 2,
-    "dataset3": 3
+    "dataset1": 0.1,
+    "dataset2": 0.2,
+    "dataset3": 0.3
   }
 ]
