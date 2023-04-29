@@ -9,8 +9,8 @@ jobs:
     - name: executing remote ssh commands using ssh key
       uses: appleboy/ssh-action@master
       with:
-        host: 158.121.104.215
-        username: woodylin
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        port: 22
+        port: ${{ secrets.PORT }}
         script: /home/woodylin/publish.sh
