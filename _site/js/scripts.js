@@ -31,7 +31,7 @@ function fetchJSONFile(path, callback) {
 var leaderboardData = [];
 
 // Fetch JSON data and initialize the leaderboard after the data is loaded
-fetchJSONFile("json/example-data.json", function (data) {
+fetchJSONFile("json/table.json", function (data) {
   leaderboardData = data;
 
   // Initialize the leaderboard with default sorting and highlighting
