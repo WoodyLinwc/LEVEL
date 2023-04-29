@@ -14,9 +14,9 @@ def write_json_file(data, file_name):
         json.dump(data, json_file, indent=2)
 
 if __name__ == "__main__":
-    json_data1 = read_json_file("/json/table.json")
+    json_data1 = read_json_file("json/table.json")
     json_data2 = read_json_file("new.json")
 
     merged_data = merge_json_files(json_data1, json_data2)
 
-    write_json_file(merged_data, "/json/table.json")
+    write_json_file(merged_data, "json/table.json")
