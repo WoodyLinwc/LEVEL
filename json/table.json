@@ -22,5 +22,11 @@
     "dataset1": 0.21,
     "dataset2": 0.45,
     "dataset3": 0.55
+  },
+  {
+    "team": "Team D",
+    "dataset1": 0.21,
+    "dataset2": 0.45,
+    "dataset3": 0.55
   }
 ]
