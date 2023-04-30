@@ -5,8 +5,8 @@ layout: default
 ---
 
   <p class="info" style="font-family: 'Barlow Condensed'; font-size: 30px; padding: 1px 300px;">
-    <b>Le-v-el Platform provides standardized <a href="https://woodylinwc.github.io/LEVEL/dataset.html" class="hyperlink">benchmark datasets </a>for computational visualization understanding
-      or Chart Question Answering. You can participate by <a href="https://woodylinwc.github.io/LEVEL/submit.html" class="hyperlink">submitting</a> the results of your algorithm.</b>
+    <b>Le-v-el Platform provides standardized <a href="dataset.html" class="hyperlink">benchmark datasets </a>for computational visualization understanding
+      or Chart Question Answering. You can participate by <a href="submit.html" class="hyperlink">submitting</a> the results of your algorithm.</b>
   </p>
 
   <header>
