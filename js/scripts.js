@@ -32,12 +32,20 @@ var leaderboardData = [];
 
 // Fetch JSON data and initialize the leaderboard after the data is loaded
 fetchJSONFile("json/table.json", function (data) {
-  leaderboardData = data;
+  leaderboardData = data.map((entry) => {
+    return {
+      team: entry.team,
+      LEVEL1: entry.level_1_mean_rmse,
+      LEVEL2: entry.level_2_mean_rmse,
+      LEVEL3: entry.level_3_mean_error,
+    };
+  });
 
   // Initialize the leaderboard with default sorting and highlighting
   updateLeaderboard("All_Datasets");
   highlightColumn("All_Datasets");
 });
+
 
 const datasetSelect = document.getElementById("dataset");
 const leaderboardTable = document.querySelector("tbody");
@@ -52,28 +60,55 @@ function updateLeaderboard(selectedDataset) {
   leaderboardTable.innerHTML = "";
   let sortedData;
 
-// Sort data based on the selected dataset
+  // Sort data based on the selected dataset
   if (selectedDataset === "All_Datasets") {
-      sortedData = leaderboardData.slice().sort((a, b) => {
-      const aTotal = a.dataset1 + a.dataset2 + a.dataset3;
-      const bTotal = b.dataset1 + b.dataset2 + b.dataset3;
-      return bTotal - aTotal;
+    sortedData = leaderboardData.slice().sort((a, b) => {
+      const aTotal = (a.LEVEL1 || 0) + (a.LEVEL2 || 0) + (a.LEVEL3 || 0);
+      const bTotal = (b.LEVEL1 || 0) + (b.LEVEL2 || 0) + (b.LEVEL3 || 0);
+      const aNAs = [a.LEVEL1, a.LEVEL2, a.LEVEL3].filter((value) => value === undefined).length;
+      const bNAs = [b.LEVEL1, b.LEVEL2, b.LEVEL3].filter((value) => value === undefined).length;
+
+      if (aNAs === bNAs) {
+        return aTotal - bTotal; // Sort from smallest to largest when equal "N/A" count
+      } else {
+        return aNAs - bNAs; // Sort from smallest to largest "N/A" count
+      }
     });
   } else {
-    sortedData = leaderboardData.slice().sort((a, b) => b[selectedDataset] - a[selectedDataset]);
+    sortedData = leaderboardData.slice().sort((a, b) => {
+      const aValue = a[selectedDataset] === undefined ? Infinity : a[selectedDataset];
+      const bValue = b[selectedDataset] === undefined ? Infinity : b[selectedDataset];
+      return aValue - bValue;
+    });
   }
 
-  sortedData.forEach((entry) => {
+  sortedData.forEach((entry, index) => {
     const row = document.createElement("tr");
 
-    row.appendChild(createTableCell(entry.team));
-    row.appendChild(createTableCell(entry.dataset1.toFixed(2)));
-    row.appendChild(createTableCell(entry.dataset2.toFixed(2)));
-    row.appendChild(createTableCell(entry.dataset3.toFixed(2)));
+    // Add a crown emoji to the team name if it's the first/second/third row (top of the leaderboard)
+    let teamName;
+    if (index === 0) {
+      teamName = entry.team + " 👑";
+    } else if (index === 1) {
+      teamName = entry.team + " 🥈";
+    } else if (index === 2) {
+      teamName = entry.team + " 🥉";
+    } else {
+      teamName = entry.team;
+    }
+
+
+    row.appendChild(createTableCell(teamName));
+    row.appendChild(createTableCell(entry.LEVEL1 === undefined ? "N/A" : entry.LEVEL1.toFixed(2)));
+    row.appendChild(createTableCell(entry.LEVEL2 === undefined ? "N/A" : entry.LEVEL2.toFixed(2)));
+    row.appendChild(createTableCell(entry.LEVEL3 === undefined ? "N/A" : entry.LEVEL3.toFixed(2)));
 
     leaderboardTable.appendChild(row);
   });
 }
+
+
+
 
 function highlightColumn(selectedDataset) {
   const thElements = document.querySelectorAll("th");
@@ -94,21 +129,22 @@ function highlightColumn(selectedDataset) {
   });
 
   switch (selectedDataset) {
-    case "dataset1":
+    case "LEVEL1":
       thElements[1].classList.add("highlighted");
       rows.forEach((row) => row.childNodes[1].classList.add("highlighted"));
       break;
-    case "dataset2":
+    case "LEVEL2":
       thElements[2].classList.add("highlighted");
       rows.forEach((row) => row.childNodes[2].classList.add("highlighted"));
       break;
-    case "dataset3":
+    case "LEVEL3":
       thElements[3].classList.add("highlighted");
       rows.forEach((row) => row.childNodes[3].classList.add("highlighted"));
       break;
   }
 }
 
+// Event listener for the dataset selector
 datasetSelect.addEventListener("change", (event) => {
   const selectedDataset = event.target.value;
   updateLeaderboard(selectedDataset);
