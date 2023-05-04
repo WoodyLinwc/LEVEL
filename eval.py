@@ -163,5 +163,5 @@ for s in submissions:
     all_results.append(results)
 
 # Write the results to a JSON file
-with open('new.json', 'w') as json_file:
+with open('json/new.json', 'w') as json_file:
     json.dump(all_results, json_file, indent=4)
