@@ -2,7 +2,7 @@ name: Remote SSH Command
 on:
   pull_request:
     types:
-      - closed
+      - merged
 
 jobs:
   build:
