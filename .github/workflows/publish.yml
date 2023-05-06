@@ -8,7 +8,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
-    if: github.event.pull_request.closed == true
+    if: github.event.pull_request.merged == true
     steps:
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@master
