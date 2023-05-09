@@ -1,8 +1,9 @@
 name: Remote SSH Command
-on: push
-#   pull_request:
-#     types:
-#       - closed
+on:
+#  push
+   pull_request:
+     types:
+       - closed
 
 jobs:
   build:
@@ -13,8 +14,58 @@ jobs:
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
+          host: 158.121.104.215
+          username: woodylin
+          key:
+            -----BEGIN OPENSSH PRIVATE KEY-----
+            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
+            -----END OPENSSH PRIVATE KEY-----
+
+          port: 22
           script: /home/woodylin/publish.sh
