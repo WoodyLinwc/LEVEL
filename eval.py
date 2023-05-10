@@ -126,7 +126,7 @@ LEV2_SUB_FILE = 'lev2_TEST_metadata.csv'
 LEV3_SUB_FILE = 'lev3_TEST_metadata.csv'
 SUBMISSIONS_DIR = 'SUBMISSIONS/'
 
-submissions = os.listdir(SUBMISSIONS_DIR)
+submissions = [s for s in os.listdir(SUBMISSIONS_DIR) if s != '.DS_Store']
 
 all_results = []  # List to store the results for all submissions
 
