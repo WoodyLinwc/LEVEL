@@ -18,6 +18,7 @@ jobs:
           else
             echo "::set-output name=already_executed::false"
           fi
+        shell: bash
 
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@master
