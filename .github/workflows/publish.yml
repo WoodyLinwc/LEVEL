@@ -10,16 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     environment: github-pages
     steps:
-      - name: Check if script has already been executed
-        id: check_execution
-        run: |
-          if [ -f /home/woodylin/published.lock ]; then
-            echo "::set-output name=already_executed::true"
-          else
-            echo "::set-output name=already_executed::false"
-          fi
-        shell: bash
-
       - name: Execute remote SSH commands using SSH key
         uses: appleboy/ssh-action@master
         with:
@@ -28,7 +18,7 @@ jobs:
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
           script: |
-            if [ "${{ steps.check_execution.outputs.already_executed }}" = "false" ]; then
+            if [ ! -f /home/woodylin/published.lock ]; then
               /home/woodylin/publish.sh
               echo "$(date)" > /home/woodylin/published.lock
             else
