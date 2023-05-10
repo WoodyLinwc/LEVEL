@@ -1,21 +1,19 @@
-name: Remote SSH Command
-on:
-#  push
-   pull_request:
-     types:
-       - closed
-
+name: remote ssh command
+on: push
+#   pull_request:
+#     types:
+#       - closed
 jobs:
+
   build:
     name: Build
     runs-on: ubuntu-latest
-    environment: github-pages
     steps:
-      - name: Execute remote SSH commands using SSH key
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
-          port: ${{ secrets.PORT }}
-          script: /home/woodylin/publish.sh
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: /home/woodylin/publish.sh
