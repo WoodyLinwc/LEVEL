@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "team": "SNEAKRZ",
+    "level_1_mean_rmse": 29.460651101441833,
+    "level_2_mean_rmse": 12943.056222271998,
+    "level_3_mean_error": 1.3067628375363
+  },
+  {
+    "team": "SRK",
+    "level_1_mean_rmse": 0.6701709473346102,
+    "level_2_mean_rmse": 50.00059038095959,
+    "level_3_mean_error": 0.008474890499999999
+  },
+  {
+    "team": "sudoku",
+    "level_1_mean_rmse": 39.80684086530146,
+    "level_2_mean_rmse": 2376.610556288988,
+    "level_3_mean_error": 236782.620882325
+  },
+  {
+    "team": ".DS_Store"
+  },
+  {
+    "team": "TEAM_York",
+    "level_2_mean_rmse": 26351.605880857434,
+    "level_3_mean_error": 1652.9160890953815
+  },
+  {
+    "team": "ZSY",
+    "level_1_mean_rmse": 2.178483077297918,
+    "level_2_mean_rmse": 114575.3238453669
+  }
+]
