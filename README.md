@@ -28,11 +28,11 @@ run the script remotely in the school server, compute the scores, and update the
 - Train your CQAW data 
 - submit a pull request
 
-After the pull request is accepted, the evaluation will be run under the hood (you can check the Github Action for the process)
+After the pull request is accepted, the evaluation will be run under the hood (you can check the Github Action for the process).
 Once the evaluation is done, refresh the page. The leaderboard will be ranked based on the quality of prediction.
 
 ## Workflow Demo
-
+It's called **demo.mp4** under the demo folder (unfortunately GitHub doesn't allow user to watch it online, you have to download it)
 
 ## Make sure you have ruby installed before host our website on the local machine
 In the terminal you can check the ruby and gem version by running
@@ -47,3 +47,18 @@ gem -v
 ```
 jekyll s
 ```
+You will see the following, click the **Server address** to open up the website
+```
+Configuration file: /Users/woodylin/Documents/LEVEL/_config.yml
+            Source: /Users/woodylin/Documents/LEVEL
+       Destination: /Users/woodylin/Documents/LEVEL/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+                    done in 0.249 seconds.
+ Auto-regeneration: enabled for '/Users/woodylin/Documents/LEVEL'
+    Server address: http://127.0.0.1:4000
+  Server running... press ctrl-c to stop.
+```
+
+## Licence 
+MIT
