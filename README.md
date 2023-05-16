@@ -25,14 +25,44 @@ run the script remotely in the school server, compute the scores, and update the
 
 ## Submit
 - Fork the repository
-- Train your CQAW data 
+- Train your CQAW data
+- Remove the published.lock file in the server to allow the workflow to be triggered (see publish.yml for more information)
 - submit a pull request
 
-After the pull request is accepted, the evaluation will be run under the hood (you can check the Github Action for the process).
+After the pull request is accepted, the evaluation will run under the hood (you can check the Github Action for the process).
 Once the evaluation is done, refresh the page. The leaderboard will be ranked based on the quality of prediction.
 
 ## Workflow Demo
 It's called **demo.mp4** under the demo folder (unfortunately GitHub doesn't allow user to watch it online, you have to download it)
+
+You will see the following update the JSON file in the GitHub Action when the workflow is triggered
+```
+out: SUBMISSION BY SNEAKRZ
+out: LEVEL 1 mean RMSE: 29.460651101441833
+out: LEVEL 2 mean RMSE: 12943.056***71998
+out: LEVEL 3 mean ERROR: 1.3067628375363
+out: SUBMISSION BY SRK
+out: LEVEL 1 mean RMSE: 0.6701709473346102
+out: LEVEL 2 mean RMSE: 50.00059038095959
+out: LEVEL 3 mean ERROR: 0.008474890499999999
+out: SUBMISSION BY sudoku
+out: LEVEL 1 mean RMSE: 39.80684086530146
+out: LEVEL 2 mean RMSE: 2376.610556288988
+out: LEVEL 3 mean ERROR: 236782.620882325
+out: SUBMISSION BY TEAM_York
+out: LEVEL 2 mean RMSE: 26351.605880857434
+out: LEVEL 3 mean ERROR: 1652.9160890953815
+out: SUBMISSION BY ZSY
+out: LEVEL 1 mean RMSE: 2.178483077297918
+out: LEVEL 2 mean RMSE: 114575.3238453669
+out: [main 5749bd1] new scores
+```
+Please remember that published.lock in the remote server will prevent the workflow from triggering (remove it before accept the pull request).
+
+The following in the GitHub Action indicates that the published.lock is presented in the server
+```
+out: Script already executed. Skipping script execution.
+```
 
 ## Make sure you have ruby installed before host our website on the local machine
 In the terminal you can check the ruby and gem version by running
