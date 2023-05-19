@@ -26,7 +26,7 @@ run the script remotely in the school server, compute the scores, and update the
 ## Submit
 - Fork the repository
 - Train your CQAW data
-- submit a pull request
+- Submit a pull request
 
 After the pull request is accepted, the evaluation will run under the hood (you can check the Github Action for the process).
 Once the evaluation is done, refresh the page. The leaderboard will be ranked based on the quality of prediction.
