@@ -75,6 +75,16 @@
     font-size: 40px;
     font-family: "Barlow Condensed";
   }
+
+  .info3 a {
+    color: rgb(79, 134, 244);
+    text-decoration: none; /* remove underline */
+}
+  .info3 img {
+    width: 40%; 
+    height: auto;
+    margin-left: 100px;
+  }
   
   .info4 {
     font-size: 30px;
