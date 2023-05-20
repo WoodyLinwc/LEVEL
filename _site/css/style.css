@@ -64,6 +64,11 @@
     font-size: 30px;
     font-family: "Barlow Condensed";
   }
+
+  .info1 a {
+    color: rgb(79, 134, 244);
+    text-decoration: none; /* remove underline */
+  }
   
   .info2 {
     font-size: 20px;
@@ -79,7 +84,7 @@
   .info3 a {
     color: rgb(79, 134, 244);
     text-decoration: none; /* remove underline */
-}
+  }
   .info3 img {
     width: 40%; 
     height: auto;
