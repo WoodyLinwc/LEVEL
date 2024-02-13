@@ -1,6 +1,6 @@
 # LEVEL
 
-Hello, this is team LEVEL
+Hello, this is team LEVEL (CS410 Software Engineering)
 - Woody Lin (team leader)
 - Sammed Jain
 - Jeremy Yao
